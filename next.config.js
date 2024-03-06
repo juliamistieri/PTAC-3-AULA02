@@ -3,7 +3,7 @@ const nextConfig = {
 
     images: {
         domains: [
-            "www.ifms.edu.br", "www.ifms.edu.br"
+            "www.ifms.edu.br", "https://www.google.com/"
         ]
     }
 
