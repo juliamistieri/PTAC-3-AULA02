@@ -7,13 +7,7 @@ export default function Footer(){
           <a href="https://ead.ifms.edu.br/"/>
           <Image width={100} height={100} src={"https://www.ifms.edu.br/marcaifms.png"}/>
         <h1>Footer</h1>
-          <nav>
-            <ul>
-            <Link href="/">
-                <li>Login</li>
-                </Link>
-            </ul>
-          </nav>
+         
         </header>
     );
 }
