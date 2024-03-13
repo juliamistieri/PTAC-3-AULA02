@@ -1,9 +1,53 @@
-.footercab {
-    text-align: center;
-    position: fixed;
-    left: 0;
+.footerContainer {
+    background-color: #0A5517;
+    padding: 20px;
+    position: relative;
     bottom: 0;
-    width: 100%;
-    background-color: blue;
-    color: aliceblue;
+    width: 96%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3.5px 3.5px 3.5px 3.5px; /* Invertendo os valores para a parte superior */
+    border-bottom-left-radius: 3.5px ;
+    border-bottom-right-radius: 3.5px ;
+    justify-content: space-between;
+    align-items: center;    
+    overflow: hidden;
+    transition: background-color black ease;
+}
+
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contactInfo {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    margin-right: 20px; /* Reduzi a margem para se alinhar melhor com o header */
+}
+
+.contactInfo a {
+    margin-left: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contactInfo a:hover {
+    text-decoration: underline;
+}
+
+.emailLink {
+    margin-top: 6px;
+}
+
+.footerText {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.footerText strong {
+    font-weight: bold;
 }

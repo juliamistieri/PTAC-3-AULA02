@@ -1,9 +1,70 @@
-.cabecalho{
+.header {
     display: flex;
-    height: 100px;
-    background-color: rgb(255, 0, 119);
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0A5517;
+    padding: 10px 20px;
+    border-radius: 3.5px;
+    overflow: hidden;
+    transition: background-color black ease;
+    width: 96%; /* Ajustado para largura relativa */
+    left: 50%; /* Move o início para o centro */
+    transform: translateX(-50%); /* Centraliza o elemento em relação ao pai */  
+    position: relative;
+  }
+
+.header.scrolled {
+    background-color: rgba(10, 85, 23, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Adiciona transição para a mudança de cor de fundo */
 }
 
-.cabecalho h1{
-    margin-top: 0px;
-}
+  .navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease, box-shadow 0.3s ease; 
+    margin-right: 20px;
+    position: relative; 
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .navLink:hover {
+    color: #ff0000; /* Cor vermelha ao passar o mouse */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra no hover */
+  }
+  
+  .navLink::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #000; /* Cor preta para a linha */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Inicialmente, a linha está invisível (sem largura) */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* Adiciona transição para a animação da linha */
+  }
+  
+  .navLink:hover::after {
+    transform: scaleX(1); /* Ao passar o mouse, a linha se expande para a largura completa */
+  }
+  
+  .logo {
+    flex-shrink: 0;
+  }
+  
