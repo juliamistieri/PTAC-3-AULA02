@@ -1,10 +1,16 @@
 import Image from "next/Image"
 export default async function Home() {
-  const respostas = await fetch("https://back-end-ifms-rho.vercel.app/campi",{
+  try{
+  const respostas = await fetch("https://back-end-ifms-rho.vercel.app/camp",{
     next:{
       revalidate: 1
     }
-  })
+  });
+
+  if (!respostas.ok) {
+    throw new Error("Erro na requisição.");
+  }
+
   const campi = await respostas.json();
   return (
     <main>
@@ -17,4 +23,12 @@ export default async function Home() {
       ))}
     </main>
   );
+}
+catch (error) {
+  return (
+    <div>
+      <h1>Erro: API indisponível.</h1>
+    </div>
+  )
+}
 }
